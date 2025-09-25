@@ -1,0 +1,352 @@
+[
+  {
+    "numeroProcesso": "1000001-11.2023.4.01.0001",
+    "classe": "Cumprimento de Sentença contra a Fazenda Pública",
+    "orgaoJulgador": "10ª VARA FEDERAL - DF",
+    "ultimaDistribuicao": "2024-07-01T10:00:00Z",
+    "assunto": "Previdenciário",
+    "segredoJustica": false,
+    "justicaGratuita": true,
+    "siglaTribunal": "TRF1",
+    "esfera": "Federal",
+    "valorCondenacao": 15000,
+    "documentos": [
+      {
+        "id": "DOC-1-1",
+        "dataHoraJuntada": "2023-07-10T08:00:00",
+        "nome": "Sentença de Mérito",
+        "texto": "SENTENÇA..."
+      }
+    ],
+    "movimentos": [],
+    "honorarios": {}
+  },
+  {
+    "numeroProcesso": "1000002-22.2023.4.02.0002",
+    "classe": "Cumprimento de Sentença contra a Fazenda Pública",
+    "orgaoJulgador": "20ª VARA FEDERAL - RJ",
+    "ultimaDistribuicao": "2024-07-01T10:00:00Z",
+    "assunto": "Previdenciário",
+    "segredoJustica": false,
+    "justicaGratuita": false,
+    "siglaTribunal": "TRF2",
+    "esfera": "Federal",
+    "valorCondenacao": null,
+    "documentos": [
+      {
+        "id": "DOC-2-1",
+        "dataHoraJuntada": "2022-11-01T08:00:00",
+        "nome": "Sentença de Mérito",
+        "texto": "SENTENÇA..."
+      },
+      {
+        "id": "DOC-2-2",
+        "dataHoraJuntada": "2023-01-15T08:00:00",
+        "nome": "Certidão de Trânsito em Julgado",
+        "texto": "CERTIDÃO..."
+      }
+    ],
+    "movimentos": [
+      {
+        "dataHora": "2023-02-01T08:00:00",
+        "descricao": "Início do cumprimento definitivo."
+      }
+    ],
+    "honorarios": {}
+  },
+  {
+    "numeroProcesso": "1000003-33.2022.4.03.0003",
+    "classe": "Cumprimento de Sentença contra a Fazenda Pública",
+    "orgaoJulgador": "15ª VARA FEDERAL - SP",
+    "ultimaDistribuicao": "2024-07-01T10:00:00Z",
+    "assunto": "Saúde",
+    "segredoJustica": false,
+    "justicaGratuita": true,
+    "siglaTribunal": "TRF3",
+    "esfera": "Federal",
+    "valorCondenacao": 500,
+    "documentos": [
+      {
+        "id": "DOC-3-1",
+        "dataHoraJuntada": "2021-11-01T08:00:00",
+        "nome": "Sentença de Mérito",
+        "texto": "SENTENÇA..."
+      },
+      {
+        "id": "DOC-3-2",
+        "dataHoraJuntada": "2022-01-10T08:00:00",
+        "nome": "Certidão de Trânsito em Julgado",
+        "texto": "CERTIDÃO..."
+      }
+    ],
+    "movimentos": [
+      {
+        "dataHora": "2022-02-01T08:00:00",
+        "descricao": "Início do cumprimento definitivo."
+      }
+    ],
+    "honorarios": {}
+  },
+  {
+    "numeroProcesso": "1000004-44.2022.5.02.0004",
+    "classe": "Cumprimento de Sentença",
+    "orgaoJulgador": "2ª VARA DO TRABALHO - SP",
+    "ultimaDistribuicao": "2024-07-01T10:00:00Z",
+    "assunto": "Verbas trabalhistas",
+    "segredoJustica": false,
+    "justicaGratuita": true,
+    "siglaTribunal": "TRT2",
+    "esfera": "Trabalhista",
+    "valorCondenacao": 20000,
+    "documentos": [
+      {
+        "id": "DOC-4-1",
+        "dataHoraJuntada": "2022-01-01T08:00:00",
+        "nome": "Sentença de Mérito",
+        "texto": "SENTENÇA..."
+      },
+      {
+        "id": "DOC-4-2",
+        "dataHoraJuntada": "2022-03-01T08:00:00",
+        "nome": "Certidão de Trânsito em Julgado",
+        "texto": "CERTIDÃO..."
+      }
+    ],
+    "movimentos": [
+      {
+        "dataHora": "2022-04-01T08:00:00",
+        "descricao": "Início do cumprimento definitivo."
+      }
+    ],
+    "honorarios": {}
+  },
+  {
+    "numeroProcesso": "1000005-55.2021.4.04.0005",
+    "classe": "Cumprimento de Sentença contra a Fazenda Pública",
+    "orgaoJulgador": "8ª VARA FEDERAL - PR",
+    "ultimaDistribuicao": "2024-07-01T10:00:00Z",
+    "assunto": "Previdenciário",
+    "segredoJustica": false,
+    "justicaGratuita": false,
+    "siglaTribunal": "TRF4",
+    "esfera": "Federal",
+    "valorCondenacao": 30000,
+    "documentos": [
+      {
+        "id": "DOC-5-1",
+        "dataHoraJuntada": "2021-06-01T08:00:00",
+        "nome": "Sentença de Mérito",
+        "texto": "SENTENÇA..."
+      },
+      {
+        "id": "DOC-5-2",
+        "dataHoraJuntada": "2021-08-01T08:00:00",
+        "nome": "Certidão de Óbito",
+        "texto": "ÓBITO DO AUTOR."
+      }
+    ],
+    "movimentos": [
+      {
+        "dataHora": "2022-01-01T08:00:00",
+        "descricao": "Início do cumprimento definitivo."
+      }
+    ],
+    "honorarios": {}
+  },
+  {
+    "numeroProcesso": "1000006-66.2020.4.05.0006",
+    "classe": "Cumprimento de Sentença contra a Fazenda Pública",
+    "orgaoJulgador": "7ª VARA FEDERAL - PE",
+    "ultimaDistribuicao": "2024-07-01T10:00:00Z",
+    "assunto": "Previdenciário",
+    "segredoJustica": false,
+    "justicaGratuita": false,
+    "siglaTribunal": "TRF5",
+    "esfera": "Federal",
+    "valorCondenacao": 40000,
+    "documentos": [
+      {
+        "id": "DOC-6-1",
+        "dataHoraJuntada": "2020-01-01T08:00:00",
+        "nome": "Sentença de Mérito",
+        "texto": "SENTENÇA..."
+      },
+      {
+        "id": "DOC-6-2",
+        "dataHoraJuntada": "2020-03-01T08:00:00",
+        "nome": "Substabelecimento sem reserva de poderes",
+        "texto": "SUBSTABELECIMENTO..."
+      }
+    ],
+    "movimentos": [
+      {
+        "dataHora": "2020-04-01T08:00:00",
+        "descricao": "Início do cumprimento definitivo."
+      }
+    ],
+    "honorarios": {}
+  },
+  {
+    "numeroProcesso": "1000007-77.2020.4.06.0007",
+    "classe": "Cumprimento de Sentença contra a Fazenda Pública",
+    "orgaoJulgador": "3ª VARA FEDERAL - MG",
+    "ultimaDistribuicao": "2024-07-01T10:00:00Z",
+    "assunto": "Previdenciário",
+    "segredoJustica": false,
+    "justicaGratuita": false,
+    "siglaTribunal": "TRF6",
+    "esfera": "Federal",
+    "valorCondenacao": 50000,
+    "documentos": [
+      {
+        "id": "DOC-7-1",
+        "dataHoraJuntada": "2020-01-01T08:00:00",
+        "nome": "Sentença de Mérito",
+        "texto": "SENTENÇA..."
+      },
+      {
+        "id": "DOC-7-2",
+        "dataHoraJuntada": "2020-03-01T08:00:00",
+        "nome": "Certidão de Trânsito em Julgado",
+        "texto": "CERTIDÃO..."
+      }
+    ],
+    "movimentos": [
+      {
+        "dataHora": "2020-04-01T08:00:00",
+        "descricao": "Início do cumprimento definitivo."
+      }
+    ],
+    "honorarios": {}
+  },
+  {
+    "numeroProcesso": "1000008-88.2019.4.07.0008",
+    "classe": "Cumprimento de Sentença contra a Fazenda Pública",
+    "orgaoJulgador": "4ª VARA FEDERAL - MA",
+    "ultimaDistribuicao": "2024-07-01T10:00:00Z",
+    "assunto": "Previdenciário",
+    "segredoJustica": false,
+    "justicaGratuita": false,
+    "siglaTribunal": "TRF7",
+    "esfera": "Federal",
+    "valorCondenacao": 20000,
+    "documentos": [
+      {
+        "id": "DOC-8-1",
+        "dataHoraJuntada": "2019-08-01T08:00:00",
+        "nome": "Certidão de Trânsito em Julgado",
+        "texto": "CERTIDÃO..."
+      }
+    ],
+    "movimentos": [
+      {
+        "dataHora": "2020-01-01T08:00:00",
+        "descricao": "Início do cumprimento definitivo."
+      }
+    ],
+    "honorarios": {}
+  },
+  {
+    "numeroProcesso": "1000009-99.2018.4.08.0009",
+    "classe": "Cumprimento de Sentença contra a Fazenda Pública",
+    "orgaoJulgador": "1ª VARA FEDERAL - PA",
+    "ultimaDistribuicao": "2024-07-01T10:00:00Z",
+    "assunto": "Previdenciário",
+    "segredoJustica": true,
+    "justicaGratuita": true,
+    "siglaTribunal": "TRF8",
+    "esfera": "Federal",
+    "valorCondenacao": 15000,
+    "documentos": [
+      {
+        "id": "DOC-9-1",
+        "dataHoraJuntada": "2018-01-01T08:00:00",
+        "nome": "Sentença de Mérito",
+        "texto": "SENTENÇA..."
+      },
+      {
+        "id": "DOC-9-2",
+        "dataHoraJuntada": "2018-05-01T08:00:00",
+        "nome": "Certidão de Trânsito em Julgado",
+        "texto": "CERTIDÃO..."
+      }
+    ],
+    "movimentos": [
+      {
+        "dataHora": "2019-01-01T08:00:00",
+        "descricao": "Início do cumprimento definitivo."
+      }
+    ],
+    "honorarios": {}
+  },
+  {
+    "numeroProcesso": "1000010-10.2017.4.09.0010",
+    "classe": "Cumprimento de Sentença contra a Fazenda Pública",
+    "orgaoJulgador": "5ª VARA FEDERAL - RS",
+    "ultimaDistribuicao": "2024-07-01T10:00:00Z",
+    "assunto": "Previdenciário",
+    "segredoJustica": false,
+    "justicaGratuita": true,
+    "siglaTribunal": "TRF9",
+    "esfera": "Federal",
+    "valorCondenacao": 99999999,
+    "documentos": [
+      {
+        "id": "DOC-10-1",
+        "dataHoraJuntada": "2017-01-01T08:00:00",
+        "nome": "Sentença de Mérito",
+        "texto": "SENTENÇA..."
+      },
+      {
+        "id": "DOC-10-2",
+        "dataHoraJuntada": "2017-05-01T08:00:00",
+        "nome": "Certidão de Trânsito em Julgado",
+        "texto": "CERTIDÃO..."
+      }
+    ],
+    "movimentos": [
+      {
+        "dataHora": "2018-01-01T08:00:00",
+        "descricao": "Início do cumprimento definitivo."
+      }
+    ],
+    "honorarios": {}
+  },
+  {
+    "numeroProcesso": "1000011-11.2016.4.10.0011",
+    "classe": "Cumprimento de Sentença contra a Fazenda Pública",
+    "orgaoJulgador": "6ª VARA FEDERAL - CE",
+    "ultimaDistribuicao": "2024-07-01T10:00:00Z",
+    "assunto": "Previdenciário",
+    "segredoJustica": false,
+    "justicaGratuita": true,
+    "siglaTribunal": "TRF10",
+    "esfera": "Federal",
+    "valorCondenacao": 25000,
+    "documentos": [
+      {
+        "id": "DOC-11-1",
+        "dataHoraJuntada": "2016-01-01T08:00:00",
+        "nome": "Sentença de Mérito",
+        "texto": "SENTENÇA..."
+      },
+      {
+        "id": "DOC-11-2",
+        "dataHoraJuntada": "2016-05-01T08:00:00",
+        "nome": "Certidão de Trânsito em Julgado",
+        "texto": "CERTIDÃO..."
+      }
+    ],
+    "movimentos": [
+      {
+        "dataHora": "2017-01-01T08:00:00",
+        "descricao": "Início do cumprimento definitivo."
+      }
+    ],
+    "honorarios": {
+      "contratuais": 2000,
+      "periciais": 1000,
+      "sucumbenciais": 3000
+    }
+  }
+]

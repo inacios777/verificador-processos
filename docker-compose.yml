@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  verificador:
+    build: .
+    container_name: verificador-processos
+    ports:
+      - "8000:8000"   # FastAPI
+      - "8501:8501"   # Streamlit
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENAI_MODEL=gpt-4o-mini
+    volumes:
+      - .:/app   # monta o código local dentro do container (bom p/ desenvolvimento)

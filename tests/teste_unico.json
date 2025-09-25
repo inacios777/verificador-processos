@@ -1,0 +1,22 @@
+{
+    "numeroProcesso": "1000001-11.2023.4.01.0001",
+    "classe": "Cumprimento de Sentença contra a Fazenda Pública",
+    "orgaoJulgador": "10ª VARA FEDERAL - DF",
+    "ultimaDistribuicao": "2024-07-01T10:00:00Z",
+    "assunto": "Previdenciário",
+    "segredoJustica": false,
+    "justicaGratuita": true,
+    "siglaTribunal": "TRF1",
+    "esfera": "Federal",
+    "valorCondenacao": 15000,
+    "documentos": [
+      {
+        "id": "DOC-1-1",
+        "dataHoraJuntada": "2023-07-10T08:00:00",
+        "nome": "Sentença de Mérito",
+        "texto": "SENTENÇA..."
+      }
+    ],
+    "movimentos": [],
+    "honorarios": {}
+}
