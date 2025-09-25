@@ -4,7 +4,8 @@ from .modelos import ProcessoBase
 from .preprocessador import converter_para_minimo
 from .llm import decidir_com_llm
 
-WEBHOOK_URL = "https://rafaaiva.app.n8n.cloud/webhook/18048e37-cf83-4d6a-814f-5ab281ddd672"
+import os
+WEBHOOK_URL = os.getenv("N8N_WEBHOOK_URL")
 
 def _formatar_datas(obj):
     if isinstance(obj, datetime):
