@@ -20,14 +20,7 @@ Execução principal:
 "tests/teste_unico.json" → arquivo com um único processo.
 "tests/teste_lista_11.json" → arquivo com lista de processos.
 
-
-
-
-
-
 """
-
-
 
 import json
 import requests
