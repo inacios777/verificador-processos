@@ -1,11 +1,29 @@
-# -------------------------------------------------------------------
-# 📜 Política de Compra de Créditos Judiciais
-# Cada regra possui um ID único (POL-x), uma descrição clara e um exemplo.
-# Dividido em três grupos:
-#   - Elegibilidade
-#   - Restrições (quando NÃO compramos)
-#   - Completude de dados
-# -------------------------------------------------------------------
+"""
+
+📌 Função deste arquivo:
+
+Definir todas as regras de política (POL-1 até POL-8) que orientam a decisão de compra dos créditos processuais.
+Essas regras servem como critérios de elegibilidade, restrição e completude de dados,
+sendo usadas pelo verificador e pelo LLM.
+
+------------------------------------------------------------------------------------------------------------------------
+Três grupos de políticas:
+
+Elegibilidade:
+➡ (POL-1) Apenas processos transitados em julgado e em fase de execução são aceitos.
+➡ (POL-2) O valor da condenação deve estar obrigatoriamente informado.
+
+Restrições:
+➡ (POL-3) Condenações com valor menor que R$1.000,00 não são aceitas.
+➡ (POL-4) Processos da esfera trabalhista são rejeitados.
+➡ (POL-5) Em caso de óbito do autor sem habilitação de herdeiros, o processo é recusado.
+➡ (POL-6) Substabelecimento sem reserva de poderes inviabiliza a compra.
+
+Completude de dados:
+➡ (POL-7) É obrigatório informar honorários contratuais, periciais e sucumbenciais quando existirem.
+➡ (POL-8) Se faltar documento essencial (certidão de trânsito em julgado, valor da condenação, cumprimento definitivo iniciado), o processo deve ser marcado como incomplete.
+
+"""
 
 POLITICA = {
   # -------------------------------------------------------------------------------------------------------------------

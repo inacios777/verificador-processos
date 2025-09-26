@@ -1,5 +1,35 @@
-from .modelos import ProcessoBase, ProcessoMinimo
+"""
 
+📌 Função deste arquivo:
+
+Transformar os dados da estrutura base (ProcessoBase) em uma versão normalizada (ProcessoMinimo),
+aplicando padronizações de nomenclatura e marcadores de status para posterior análise pelas políticas.
+
+------------------------------------------------------------------------------------------------------------------------
+Principais responsabilidades:
+
+Conversão de nomenclatura:
+➡ Função auxiliar snake_to_camel converte chaves de snake_case para camelCase, garantindo compatibilidade
+com o schema esperado.
+
+Normalização de documentos e movimentos:
+➡ Cada documento ou movimento relevante é mapeado em chaves padronizadas:
+sentencaMerito → armazena data e resumo.
+transitoJulgado → status “Sim/Não” e documento de referência.
+cumprimentoDefinitivoIniciado → status e data do movimento.
+calculosApresentados, intimacaoEntePublico, prazoImpugnacaoAberto → extraem presença e data.
+requisitorio → tipo (RPV), valor e data de expedição.
+cessaoPreviaPagamento → status e resumo do texto.
+substabelecimentoSemReserva e obitoAutor → sinalizadores de restrição.
+
+Construção da Estrutura Mínima:
+➡ Retorna um objeto ProcessoMinimo, preservando os metadados principais do processo
+(número, classe, órgão, valores, esfera, honorários) e substituindo os documentos por uma versão padronizada em camelCase.
+
+"""
+
+
+from .modelos import ProcessoBase, ProcessoMinimo
 
 def snake_to_camel(s: str) -> str:
     parts = s.split("_")

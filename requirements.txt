@@ -1,14 +1,7 @@
 fastapi
 uvicorn[standard]
 pydantic>=2
-pydantic-settings
 python-dotenv
-structlog
-httpx
 openai>=1.40.0
-tiktoken
-ujson
-streamlit
 requests
-
-
+streamlit

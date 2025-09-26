@@ -1,30 +1,27 @@
 """
-modelos.py
 
 📌 Função deste arquivo:
-Definir todos os modelos de dados usados no sistema, com Pydantic.
-Isso garante que a entrada (Estrutura Base), a transformação (Estrutura Mínima)
-e a saída (Resposta) estejam padronizadas.
 
--------------------------------------------------------------------------------
-Três grupos de modelos:
+Definir todas as estruturas de dados que o sistema manipula, utilizando Pydantic para validação e tipagem.
+Organiza desde a entrada bruta dos processos, até a versão normalizada e a resposta final estruturada.
 
-1. Estrutura Base:
-   ➡ Formato cru dos processos judiciais, como vem do tribunal.
-   ➡ Entrada inicial do sistema.
-   ➡ Contém documentos (texto livre) e movimentos (eventos em linha do tempo).
+------------------------------------------------------------------------------------------------------------------------
+Três blocos principais:
 
-2. Estrutura Mínima:
-   ➡ Versão simplificada e normalizada para aplicar as regras da política (POL-1 até POL-8).
-   ➡ Saída do pré-processador.
-   ➡ Campos são fixos, com status "Sim/Não" ou valores já prontos para análise.
+Estrutura Base (entrada bruta):
+➡ Representa os processos judiciais exatamente como recebidos do tribunal.
+➡ Inclui documentos e movimentos originais, além de dados como valores, classe e órgão julgador.
+➡ Serve como ponto de partida para o pré-processamento.
 
-3. Resposta:
-   ➡ Saída final estruturada que a API/LLM deve retornar.
-   ➡ Define se o processo é "aprovado", "rejeitado" ou "incompleto".
-   ➡ Inclui justificativa textual e citações das regras de política aplicadas.
+Estrutura Mínima (normalizada):
+➡ Versão simplificada e organizada para análise de regras.
+➡ Converte documentos em dicionários, padroniza campos e aplica validações (ex.: impedir valores negativos em condenação).
+➡ Saída do pré-processador, pronta para uso pelas políticas de decisão.
 
--------------------------------------------------------------------------------
+Saída do Verificador (decisão final):
+➡ Modelo de resposta que a API/LLM deve retornar.
+➡ Contém o resultado (approved / rejected / incomplete), a justificativa textual e citações das regras aplicadas.
+➡ Estrutura compatível com o case final de decisão.
 
 """
 

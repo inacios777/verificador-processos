@@ -1,4 +1,42 @@
-# streamlit_app.py
+"""
+📌 Função deste arquivo:
+Fornecer uma interface gráfica em Streamlit para interação com a API do verificador de processos.
+Permite enviar JSONs de entrada, escolher o formato de saída e visualizar a decisão de forma amigável.
+
+------------------------------------------------------------------------------------------------------------------------
+Principais responsabilidades:
+
+Configuração da interface:
+➡ Define título, ícone ⚖️ e layout wide.
+➡ Permite ao usuário informar a URL da API (padrão: http://127.0.0.1:8000).
+➡ Opção de saída: texto formatado (/analisar) ou JSON (/analisar_json).
+➡ Se JSON, há opção de exibir no formato “pretty” (estilo do desafio).
+
+Entrada de dados:
+➡ Duas abas para envio:
+📋 Colar JSON diretamente em uma área de texto.
+📁 Enviar arquivo .json via upload.
+➡ Função _carregar_payload unifica a leitura do JSON de entrada.
+
+Envio para a API:
+➡ Botão “🚀 Enviar para API” dispara requisição POST.
+➡ Mede tempo de resposta (ms) e exibe status HTTP.
+➡ Permite visualizar o payload enviado.
+
+Exibição da resposta:
+➡ Se resposta for texto (PlainText), mostra como código formatado.
+➡ Se resposta for JSON:
+Exibe com st.json.
+
+Para um único processo: destaca resultado, citações e justificativa em métricas e texto.
+Para lista de processos: mostra cada processo em expander/card com resumo e JSON completo.
+
+Tratamento de erros:
+➡ Lida com erros comuns: JSON inválido, falhas na requisição, exceções genéricas.
+➡ Mensagens de erro exibidas no painel do Streamlit.
+
+"""
+
 import json
 import time
 import os
@@ -31,7 +69,14 @@ else:
 tab1, tab2 = st.tabs(["📋 Colar JSON", "📁 Enviar arquivo .json"])
 
 with tab1:
-    body_text = st.text_area("Cole aqui o JSON", height=300, placeholder="{} ou [ {}, {}, ... ]")
+  body_text = st.text_area(
+    "Cole aqui o JSON",
+    height=300,
+    placeholder=(
+      "Único processo: objeto { ... } contendo os campos principais do processo.\n"
+      "Múltiplos processos: lista [ { ... }, { ... }, ... ] com cada processo no mesmo formato."
+    )
+  )
 
 with tab2:
     up = st.file_uploader("Selecione um arquivo .json", type=["json"])

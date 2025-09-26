@@ -1,3 +1,32 @@
+"""
+
+📌 Função deste arquivo:
+Orquestrar o fluxo de decisão: desde a entrada bruta do processo até a saída final padronizada,
+já enviada para um webhook do n8n.
+
+------------------------------------------------------------------------------------------------------------------------
+Principais responsabilidades:
+
+Configuração do webhook:
+➡ A URL do n8n (N8N_WEBHOOK_URL) é carregada das variáveis de ambiente.
+
+Formatação de datas (_formatar_datas):
+➡ Converte objetos datetime em strings ISO 8601 (YYYY-MM-DDTHH:MM:SSZ).
+➡ Aplica recursivamente em dicionários e listas.
+
+Análise do processo (analisar_processo). Passos principais:
+Constrói um ProcessoBase a partir do JSON de entrada.
+Converte para ProcessoMinimo via converter_para_minimo.
+Obtém a decisão final chamando o LLM (decidir_com_llm).
+Monta a resposta padronizada contendo todos os metadados + decisão (resultado, justificativa, citacoes).
+➡ Aplica _formatar_datas na resposta para garantir consistência temporal.
+
+Integração com n8n:
+➡ Envia o resultado final para o webhook configurado.
+➡ Em caso de erro na requisição, captura exceção e imprime mensagem de debug.
+
+"""
+
 import requests
 from datetime import datetime
 from .modelos import ProcessoBase

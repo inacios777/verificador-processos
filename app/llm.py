@@ -1,19 +1,34 @@
 """
-llm.py
 
 📌 Função deste arquivo:
-Conectar com o LLM (ex.: OpenAI GPT) para tomar decisão sobre um ProcessoMinimo.
 
-➡ Entrada: ProcessoMinimo (já normalizado pelo preprocessador).
-➡ Saída: RespostaDecisao (decisão final + justificativa + citações).
+Integrar o sistema ao LLM da OpenAI, enviando os dados já normalizados (ProcessoMinimo)
+junto com as regras da política e recebendo a decisão estruturada em formato JSON.
 
--------------------------------------------------------------------------------
-📌 Como funciona:
-1. Monta o prompt com:
-   - Texto da política (POL-1 a POL-8).
-   - Estrutura mínima do processo (JSON).
-2. Envia para o modelo da OpenAI (com formato forçado em JSON).
-3. Recebe e valida a resposta convertendo em RespostaDecisao.
+------------------------------------------------------------------------------------------------------------------------
+Principais responsabilidades:
+
+Configuração do modelo:
+➡ O modelo a ser usado é definido via variável de ambiente (OPENAI_MODEL).
+➡ A chave da API (OPENAI_API_KEY) também é carregada do .env via dotenv.
+
+Mensagem de sistema (SYSTEM_MSG):
+➡ Define o comportamento esperado do LLM: um verificador jurídico rigoroso, que aplica apenas as regras
+fornecidas sem interpretações adicionais.
+
+Montagem do prompt (montar_prompt):
+➡ Estrutura o contexto enviado ao LLM contendo:
+Instruções claras de prioridade das regras (rejeição absoluta → aprovação mínima → completude → honorários).
+Texto integral da política (POLITICA_TEXTO).
+Estrutura mínima do processo em JSON (ProcessoMinimo).
+➡ Reforça que a saída deve ser exclusivamente JSON válido com os campos resultado, justificativa e citacoes.
+
+Decisão com LLM (decidir_com_llm):
+➡ Constrói o cliente da OpenAI, envia o prompt e recebe a resposta.
+➡ Garante saída em JSON usando response_format={"type": "json_object"}.
+➡ Valida a resposta contra o modelo RespostaDecisao para assegurar conformidade.
+➡ Caso a saída não seja JSON válido, levanta exceção (ValueError).
+
 """
 
 import json

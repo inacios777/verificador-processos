@@ -1,3 +1,39 @@
+"""
+
+📌 Função deste arquivo:
+
+Responsável por formatar os resultados finais dos processos em um padrão de saída legível e consistente,
+seguindo o estilo definido em teste_decisao.py.
+Serve para organizar os campos em ordem lógica e gerar uma visualização clara da decisão
+(incluindo documentos, honorários e citações).
+
+------------------------------------------------------------------------------------------------------------------------
+Principais responsabilidades:
+
+Ordem dos campos:
+➡ Define duas listas de ordenação:
+TOP_LEVEL_ORDER: ordem dos campos principais do processo (número, classe, valores, documentos, honorários, resultado etc.).
+DOCS_ORDER: ordem esperada para os documentos dentro da chave documentos.
+
+Formatação de resultado único (formatar_resultado):
+➡ Recebe um dict de resultado e gera uma string JSON-like formatada.
+➡ Garante:
+Inclusão da chave "documentos" mesmo se estiver ausente.
+Campos organizados conforme TOP_LEVEL_ORDER, com extras listados em ordem alfabética no fim.
+Documentos ordenados por DOCS_ORDER, com extras também ordenados alfabeticamente.
+Honorários exibidos em formato de objeto, item a item.
+citacoes impressas inline (sem indentação extensa).
+
+Formatação de múltiplos resultados (formatar_resultados):
+➡ Recebe uma lista de resultados e concatena cada um em blocos separados no estilo:
+=== Teste 1 ===
+{ ... }
+=== Teste 2 ===
+{ ... }
+➡ Ideal para rodadas de teste ou validação em batch.
+
+"""
+
 import json
 
 TOP_LEVEL_ORDER = [

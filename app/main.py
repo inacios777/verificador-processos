@@ -1,4 +1,34 @@
-# app/main.py
+"""
+
+📌 Função deste arquivo:
+Definir a API FastAPI que expõe os endpoints do verificador de processos.
+Permite enviar um ou vários processos para análise e obter como resposta tanto texto formatado quanto JSON estruturado.
+
+------------------------------------------------------------------------------------------------------------------------
+Principais responsabilidades:
+
+Configuração da API:
+➡ Instancia um app FastAPI com título "Verificador de Processos".
+
+Endpoint /analisar (texto legível):
+➡ Entrada: um único processo (dict) ou uma lista de processos.
+➡ Para cada processo, chama analisar_processo.
+➡ Retorna saída em texto formatado, usando formatar_resultados.
+➡ Resposta com PlainTextResponse para facilitar visualização em testes.
+
+Endpoint /analisar_json (contratual):
+➡ Entrada: igual ao /analisar (um ou vários processos).
+➡ Retorna saída em JSON estruturado, pronto para consumo em integrações.
+
+Endpoint /health:
+➡ Retorna {"status": "ok"}.
+➡ Usado para monitoramento e checagem de disponibilidade do serviço.
+
+Tratamento de erros:
+➡ Em ambos os endpoints principais, captura exceções e retorna HTTP 400 com detalhe do erro.
+
+"""
+
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import PlainTextResponse
 from typing import Union, List, Dict
