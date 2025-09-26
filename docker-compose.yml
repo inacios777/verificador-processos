@@ -1,26 +1,3 @@
-# 📌 Função deste arquivo:
-# Definir a infraestrutura de execução do sistema via Docker Compose, permitindo rodar tanto a API (FastAPI)
-# quanto a interface gráfica (Streamlit) em um único container.
-#
-# ------------------------------------------------------------------------------------------------------------------------
-# Principais responsabilidades:
-#
-# Serviço verificador:
-# ➡ Constrói a imagem a partir do Dockerfile no diretório atual (build: .).
-# ➡ Nome do container: verificador-processos.
-#
-# Exposição de portas:
-# 8000 → API FastAPI.
-# 8501 → Interface Streamlit.
-#
-# Variáveis de ambiente:
-# ➡ Define o modelo padrão da OpenAI (OPENAI_MODEL=gpt-4o-mini).
-# ➡ Injeta a chave da OpenAI a partir do ambiente (OPENAI_API_KEY).
-#
-# Volumes:
-# ➡ Monta o diretório local (.) dentro do container em /app.
-# ➡ Facilita o desenvolvimento ao refletir alterações de código em tempo real sem precisar rebuildar a imagem.
-
 version: "3.9"
 
 services:
@@ -32,6 +9,6 @@ services:
       - "8501:8501"   # Streamlit
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
-      - OPENAI_MODEL=gpt-4o-mini
+      - OPENAI_MODEL=gpt-4o
     volumes:
       - .:/app   # monta o código local dentro do container (bom p/ desenvolvimento)

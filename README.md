@@ -99,7 +99,7 @@ API_URL=http://127.0.0.1:8000
 
 docker-compose up --build
 
-API disponível em → http://127.0.0.1:8000
+API disponível em → http://127.0.0.1:8000/docs
 
 Streamlit disponível em → http://127.0.0.1:8501
 
@@ -178,10 +178,3 @@ POL-8: Se faltar documento essencial, marcar como "incomplete".
 ✔️ Testes básicos via tests/teste_decisao.py.
 
 ----------------------------------------------------------------
-🚀 Deploy
-
-O sistema pode ser facilmente publicado em Railway, Render, Fly.io ou similares, expondo:
-
-Porta 8000 (API).
-
-Porta 8501 (Streamlit UI).

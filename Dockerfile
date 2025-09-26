@@ -1,33 +1,4 @@
 # -------------------------------
-# Interface gráfica (Streamlit)
-# -------------------------------
-# 📌 Função deste arquivo:
-# Construir a imagem Docker que executa apenas a interface Streamlit,
-# apontando para a API FastAPI (rodando em outro serviço).
-#
-# -------------------------------------------------
-# Principais responsabilidades:
-# -------------------------------------------------
-# Imagem base:
-#   ➡ Usa python:3.11-slim para reduzir o tamanho final do container.
-#
-# Diretório de trabalho:
-#   ➡ Define /app como diretório principal dentro do container.
-#
-# Cópia do projeto:
-#   ➡ Copia todos os arquivos locais para /app.
-#
-# Instalação de dependências:
-#   ➡ Atualiza o pip.
-#   ➡ Instala as dependências listadas em requirements.txt.
-#
-# Exposição de portas:
-#   - 8501 → Interface Streamlit
-#
-# Comando de execução:
-#   ➡ Executa apenas o Streamlit apontando para ui/streamlit_app.py
-
-# -------------------------------
 # Imagem base com Python
 # -------------------------------
 FROM python:3.11-slim
@@ -42,10 +13,12 @@ COPY . /app
 RUN pip install --no-cache-dir --upgrade pip \
     && pip install --no-cache-dir -r requirements.txt
 
-# Expor porta do Streamlit
-EXPOSE 8501
+# Expor portas:
+# 8000 -> FastAPI
+# 8501 -> Streamlit
+EXPOSE 8000 8501
 
 # -------------------------------
 # Comando de execução
 # -------------------------------
-CMD ["streamlit", "run", "ui/streamlit_app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port 8000 & streamlit run ui/streamlit_app.py --server.port=8501 --server.address=0.0.0.0"]
